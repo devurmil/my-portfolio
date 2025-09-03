@@ -3,7 +3,7 @@ html  {
 }
 
 body {
-    font-family: 'Epunda Slab', serif;
+    font-family: 'Times New Roman', arial;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,9 +13,11 @@ body {
 .header {
     display: flex;
     flex-direction: row;
+    max-width: 1200px;
     align-items: center;
+    margin: auto;
     justify-content: space-between; 
-    padding: 10px 20px;
+    padding: 20px 20px;
 }
 
 .header h1{
@@ -24,22 +26,22 @@ body {
     font-size: 32px;
     color: #333;
     font-weight: bold;
+    
 }
 
 .navbar {
-    padding: 5px 0;
-    width: 50%;
-    margin: auto;
-    margin-top: 10px;
+    padding: 5px;
+    width: 55%;
+    /* max-width: 800px; */
+    min-width: max-content;
     border-radius: 30px;
     background-color: #ffffff;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
     position: fixed;
-    top: 10px;
-    left: 25%;
+    top: 15px;
+    left: 23%;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around; 
 }
 
 .navbar div a{
@@ -55,12 +57,14 @@ nav a.active{
 
 .navbar button {
     background-color: #ffffff;
-    padding: 10px;  
+    padding: 3px 6px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     font-size: 16px;
     transition: 0.15s;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar button:hover {
@@ -81,6 +85,11 @@ nav a.active{
     border-style: solid;
     padding: 10px 20px;
     border-radius: 20px;
+    transition: 0.2s;;
+}
+
+.download-cv button:hover {
+    background-color: #333;
 }
 
 .profile-pic {
@@ -109,11 +118,12 @@ nav a.active{
     text-align: center;
 }
 
-.description {
-    margin:auto;  
+.main-description {
+    margin:auto; 
+    padding: 10px; 
     font-size: 20px;
     color: #666;
-    max-width: 800px;
+    max-width: 1200px;
     text-align: center;
 }
 
@@ -149,7 +159,7 @@ nav a.active{
 
 .about-me {
     padding: 40px 20px;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
     text-align: center;
 }
@@ -183,6 +193,8 @@ nav a.active{
 .projects-section {
     padding: 40px 20px;
     background: #fafafa;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .projects-section h2 {
@@ -202,6 +214,7 @@ nav a.active{
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+   
 }
 
 .first-project, .second-project , .third-project , .fourth-project {
@@ -212,7 +225,28 @@ nav a.active{
     border-width: 0px;
     border-radius: 10px;
     transition: 0.3s;
+    gap: 20px;
+     margin: 20px 20px;
 }
+
+/* @media only screen and (max-width: 900px) {
+    .first-project, .second-project, .third-project, .fourth-project {
+        flex-direction: column;
+        text-align: center;}
+}
+
+@media only screen and (min-width: 440px) {
+    .first-project, .second-project, .third-project, .fourth-project {
+        flex-direction: column;
+        text-align: center;}
+}
+
+@media only screen and (min-width: 900px) {
+    .project-section {
+        flex-direction: column;
+        text-align: center;}
+} */
+
 
 .first-project:hover, .second-project:hover, .third-project:hover, .fourth-project:hover {
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
@@ -316,4 +350,107 @@ footer {
     padding: 20px;
     background-color: #f1f1f1;
     margin-top: 40px;
+}
+
+/* For-Mobile */
+@media (max-width: 767px) {
+  
+  .header {
+    
+    margin: auto;
+    }
+
+  .header h1 {
+    font-size: 24px;
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .download-cv button{
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .navbar {
+    margin: auto;
+    padding: auto;
+  }
+
+  .navbar div a {
+    font-size: 10px;
+    align-items: center;
+  }
+
+  #intro {
+    font-size: 24px;
+  }
+
+  .about-me p {
+    font-size: 16px;
+}
+  
+  
+.about-me-pic {
+    width: 150px;
+    height: 150px;
+}
+
+
+  .description {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .project-list div {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  .project-list img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+
+  .contact-section {
+        width: 90%;
+        padding: 10px;
+        max-width: 400px;
+    }
+
+  .contact-form {
+        width: 90%;
+        padding: 10px;
+        max-width: 300px;
+    }
+}
+
+/* For-Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  
+    .header h1 {
+    font-size: 24px;
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .download-cv button{
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+    .navbar {
+    width: 70%;
+    left: 15%;
+  }
+
+  #intro {
+    font-size: 28px;
+  }
+
+  .project-list img {
+    width: 300px;
+    height: 180px;
+  }
 }

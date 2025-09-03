@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Urmil Ramani | Web Develeoper</title>
+    <title>Urmil Ramani | Web Developer</title>
+    <meta name="description" content="Portfolio of Urmil Ramani – Web Developer building responsive, accessible, and modern web experiences using HTML, CSS, JavaScript, and React.">
+    <meta property="og:title" content="Urmil Ramani | Web Developer">
+    <meta property="og:description" content="Responsive websites and creative digital experiences with HTML, CSS, JavaScript, and React.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/favicon-32x32.png" >
 
@@ -15,10 +21,9 @@
 </head>
 
 <body>
-    <section id="top-section">
-    
-    <div class="header">
-        <h1>Urmil Ramani</h1>
+    <header id="top-section">
+        <div class="header">
+            <h1>Urmil Ramani</h1>
 
         <!-- Navigation Bar -->
         <nav class="navbar">
@@ -36,15 +41,16 @@
             </div>
         </nav>
 
-        <div class="download-cv" title="yep that's my resume">
-            <button><a href="files/Urmil-Ramani-IT-Engineer-Resume.pdf" download>Download CV</a></button>
+            <div class="download-cv" title="Download my resume">
+                <a class="btn" href="files/Urmil-Ramani-IT-Engineer-Resume.pdf" download>Download CV</a>
+            </div>
         </div>
-    </div>
-    </section>
+    </header>
 
 
+    <main id="main">
     <!-- Main Content -->
-    <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic" oncontextmenu="return false;" title="This is me :&#41;">
+    <img src="images/profile.jpg" alt="Portrait of Urmil Ramani" class="profile-pic" width="150" height="150">
     <div class="heading">
         <p id="intro">Building Responsive Websites and Creative Digital Experiences!</p>
         <p class="main-description">With a strong foundation in web technologies like HTML, CSS, JavaScript, and React, I
@@ -57,13 +63,13 @@
     <section class="tech-stack">
         <h2>Tech Stack</h2>
         <div class="tech-icons">
-            <img src="images/html.png" alt="HTML" title="HTML">
-            <img src="images/css.png" alt="CSS" title="CSS">
-            <img src="images/js.png" alt="JavaScript" title="JavaScript">
-            <img src="images/react.png" alt="React" title="React">
-            <img src="images/git.png" alt="Git" title="Git">
-            <img src="images/github.png" alt="GitHub" title="GitHub">
-            <img src="images/vscode.png" alt="VS Code" title="VS Code">
+            <img src="images/html.png" alt="HTML logo" title="HTML" loading="lazy" width="100" height="100">
+            <img src="images/css.png" alt="CSS logo" title="CSS" loading="lazy" width="100" height="100">
+            <img src="images/js.png" alt="JavaScript logo" title="JavaScript" loading="lazy" width="100" height="100">
+            <img src="images/react.png" alt="React logo" title="React" loading="lazy" width="100" height="100">
+            <img src="images/git.png" alt="Git logo" title="Git" loading="lazy" width="100" height="100">
+            <img src="images/github.png" alt="GitHub logo" title="GitHub" loading="lazy" width="100" height="100">
+            <img src="images/vscode.png" alt="VS Code logo" title="VS Code" loading="lazy" width="100" height="100">
         </div>
     </section>
 
@@ -71,7 +77,7 @@
     <section id="about-section">
         <div class="about-me">
             <h2>About Me</h2>
-            <img src="images/me.jpg" alt="About Me" class="about-me-pic" title="This is me :&#41;">
+            <img src="images/me.jpg" alt="Photo of Urmil Ramani" class="about-me-pic" loading="lazy" width="200" height="200">
             <p class="description">I am Urmil Ramani, a passionate web developer with a knack for creating engaging and
                 user-friendly digital experiences. With a strong foundation in HTML, CSS, JavaScript, and React, I
                 specialize in building responsive websites that are both visually appealing and functionally robust.</p>
@@ -93,78 +99,96 @@
             <div class="project-list">
                 <div>
                     <h3>Rakshak (a women’s safety app):</h3>
-                    <div class="first-project">
-                        <p>Description: A mobile/web application focused on women’s safety.
-                            Key Features:
-                            Emergency panic button & side-button trigger
-                            Live location sharing
-                            Safe zone map for nearby help centers
-                            Multilingual 24x7 helpline
-                            Tech Stack: React Native, Node.js, Express, MongoDB
-                        </p>
-                        <img src="images/rakshak.jpg" alt="Rakshak" title="Rakshak App" class="project-pic"
-                            style="width:200px;">
+                    <div class="project-card">
+                        <div>
+                            <p><b>Description:</b> A mobile/web application focused on women’s safety.</p>
+                            <p><b>Key Features:</b></p>
+                            <ul>
+                                <li>Emergency panic button & side-button trigger</li>
+                                <li>Live location sharing</li>
+                                <li>Safe zone map for nearby help centers</li>
+                                <li>Multilingual 24x7 helpline</li>
+                            </ul>
+                            <p><b>Tech Stack:</b> React Native, Node.js, Express, MongoDB</p>
+                        </div>
+                        <img src="images/rakshak.jpg" alt="Rakshak app screenshot" title="Rakshak App" class="project-pic" loading="lazy" width="400" height="200">
                     </div>
                 </div>
                 <div>
                     <h3>Delish Diaries (Recipe Website):</h3>
-                    <div class="second-project">
-                        <img src="images/delish.png" alt="Delish" title="Delish Web" class="project-pic">
-                        <p>Description: A recipe-sharing platform where users can post, manage, and explore recipes.
-                            Key Features:
-                            User registration and login system
-                            Post, edit, and view recipes
-                            Comment system for interactions
-                            Social sharing integration
-                            Tech Stack: HTML, CSS, JavaScript, Oracle Database, Incremental Model</p>
+                    <div class="project-card">
+                        <img src="images/delish.png" alt="Delish website screenshot" title="Delish Web" class="project-pic" loading="lazy" width="400" height="200">
+                        <div>
+                            <p><b>Description:</b> A recipe-sharing platform where users can post, manage, and explore recipes.</p>
+                            <p><b>Key Features:</b></p>
+                            <ul>
+                                <li>User registration and login system</li>
+                                <li>Post, edit, and view recipes</li>
+                                <li>Comment system for interactions</li>
+                                <li>Social sharing integration</li>
+                            </ul>
+                            <p><b>Tech Stack:</b> HTML, CSS, JavaScript, Oracle Database, Incremental Model</p>
+                        </div>
                     </div>
                 </div>
                 <div>
                     <h3>Tourism Management System (Startup Project):</h3>
-                    <div class="third-project">
-                        <p>Description: A platform to book and manage tourism services.
-                            Key Features:
-                            Tour package browsing & booking
-                            User authentication & management
-                            Payment integration
-                            Admin dashboard for managing packages
-                            Tech Stack: Node.js, React, Prisma, MySQL </p>
-                        <img src="images/www.jpg" alt="WWW" title="Wander Web" class="project-pic">
+                    <div class="project-card">
+                        <div>
+                            <p><b>Description:</b> A platform to book and manage tourism services.</p>
+                            <p><b>Key Features:</b></p>
+                            <ul>
+                                <li>Tour package browsing & booking</li>
+                                <li>User authentication & management</li>
+                                <li>Payment integration</li>
+                                <li>Admin dashboard for managing packages</li>
+                            </ul>
+                            <p><b>Tech Stack:</b> Node.js, React, Prisma, MySQL</p>
+                        </div>
+                        <img src="images/www.jpg" alt="Tourism management web screenshot" title="Wander Web" class="project-pic" loading="lazy" width="400" height="200">
                     </div>
                 </div>
                 <div>
                     <h3>Smart Farmer (Digital Farmer Assistant):</h3>
-                    <div class="fourth-project">
-                        <img src="images/smart.jpg" alt="Smart-Farmer" title="Smart Farmer Web" class="project-pic">
-                        <p>Description: A web-based solution for smart agriculture that detects crop leaf diseases.
-                            Key Features:
-                            Upload crop leaf image to detect disease
-                            Multiple disease classifications
-                            Suggests treatment/advice
-                            Tech Stack: Python, Machine Learning, Flask/Django, React
+                    <div class="project-card">
+                        <img src="images/smart.jpg" alt="Smart Farmer web screenshot" title="Smart Farmer Web" class="project-pic" loading="lazy" width="400" height="200">
+                        <div>
+                            <p><b>Description:</b> A web-based solution for smart agriculture that detects crop leaf diseases.</p>
+                            <p><b>Key Features:</b></p>
+                            <ul>
+                                <li>Upload crop leaf image to detect disease</li>
+                                <li>Multiple disease classifications</li>
+                                <li>Suggests treatment/advice</li>
+                            </ul>
+                            <p><b>Tech Stack:</b> Python, Machine Learning, Flask/Django, React</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- contact sectin-->
+    <!-- contact section -->
     <section id="contact-section" class="contact-section">
         <div>
             <h2>Contact Me</h2>
             <p class="description">Feel free to reach out for collaborations or just a friendly hello!</p>
-            <form class="contact-form" action="#">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <form class="contact-form" action="#" aria-describedby="form-message">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
+                <p id="form-message" class="visually-hidden" aria-live="polite"></p>
             </form>
 
             <div class="socials">
-                <a href="https://www.linkedin.com/in/urmil-ramani-3a2236326/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon"></a>
-                <a href="https://github.com/devurmil" target="_blank"><img src="images/github.png" alt="GitHub" class="social-icon" ></a>
-                <a href="https://www.instagram.com/mr_ramani_108/" target="_blank"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
-                <a href="mailto:urmilramani124@gmail.com" target="_blank"><img src="images/gmail.png" alt="Gmail" class="social-icon"></a>
+                <a href="https://www.linkedin.com/in/urmil-ramani-3a2236326/" target="_blank" rel="noopener noreferrer"><img src="images/linkedin.png" alt="LinkedIn" class="social-icon" loading="lazy" width="30" height="30"></a>
+                <a href="https://github.com/devurmil" target="_blank" rel="noopener noreferrer"><img src="images/github.png" alt="GitHub" class="social-icon" loading="lazy" width="30" height="30"></a>
+                <a href="https://www.instagram.com/mr_ramani_108/" target="_blank" rel="noopener noreferrer"><img src="images/instagram.png" alt="Instagram" class="social-icon" loading="lazy" width="30" height="30"></a>
+                <a href="mailto:urmilramani124@gmail.com" target="_blank" rel="noopener noreferrer"><img src="images/gmail.png" alt="Gmail" class="social-icon" loading="lazy" width="30" height="30"></a>
             </div>
         </div>
     </section>
@@ -172,6 +196,7 @@
     <footer>
         <p>&copy; 2025 Urmil Ramani. All rights reserved.</p>
     </footer>
+    </main>
 </body>
 
 </html>

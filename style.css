@@ -6,6 +6,7 @@ body {
     font-family: "Roboto", Arial, system-ui, -apple-system, Segoe UI, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* To prevent content being hidden under fixed navbar */
     box-sizing: border-box;
     background-color: #f9f9f9;
 }
@@ -17,53 +18,46 @@ body {
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
+    
     max-width: 1200px;
     align-items: center;
     margin: auto;
-    justify-content: center; 
-    padding: 20px 20px;
+    /* justify-content: space-between;  */
+    /* padding: 20px 20px; */
 }
 
-/* .header h1{
+.header h1 {
+    font-family: cursive;
+    font-size: 24px;
+    margin: 0px 10px;
+    padding: 10px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px;
-    font-size: 32px;
-    color: #333;
-    font-weight: bold;
-    
-} */
+    width: 85%;
+    max-width: 1000px;
+    min-width: max-content;
+    height: auto;
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0.5);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-.header-content {
+.navbar ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.navbar {
-    padding: 5px 12px;
-    width: 55%;
-    max-width: 900px;
-    min-width: max-content;
-    border-radius: 30px;
-    background-color: #ffffff;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 15px;
-    /* left: 23%; */
-    display: flex;
-    justify-content: space-around; 
-}
-
-.navbar div a{
-    font-size: 15px;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav a.active{
@@ -71,7 +65,9 @@ nav a.active{
     border-bottom: 2px solid black;
 }
 
-.navbar button {
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
     background-color: #ffffff;
     padding: 3px 6px;
     border-radius: 20px;
@@ -83,18 +79,26 @@ nav a.active{
     justify-content: center;
 }
 
-.navbar button:hover {
-    background-color: #dfdfdf;
+.navbar a:hover {
+    background-color: #c9c9c9;
 }
 
 .download-cv {
-    margin-right: 20px;
-    cursor: pointer;
+    /* margin-right: 10px; */
 }
 
 .download-cv a {
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: black;
     text-decoration: none;
     color: rgb(255, 255, 255);
+}
+
+.download-cv a:hover {
+    background-color: #333;
 }
 
 .btn{
@@ -121,9 +125,24 @@ nav a.active{
 .profile-pic {
     display: block;
     margin: 10px auto 0px auto;
-    width: 150px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.main-content img{
+    margin: 10px 100px;
 }
 
 .heading{
@@ -132,25 +151,38 @@ nav a.active{
   justify-content:center;
   margin-bottom: 10px;
 }
-
-#intro {
-    font-size: 36px;
+/* 
+#my-name {
+    font-size: 32px;x   
     font-weight: bold;
-    max-width: 600px;
-    margin:auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
     color: #333;
-    text-align: center;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 20px;
+} */
+#greet {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+    margin: 30px 0 5px 20px;
+}
+#intro{
+    font-size: 32px;
+    font-weight: bold;
+    /* max-width: 600px; */
+    margin: 5px 0 10px 20px;
+    color: #333;
+    text-align: left;
 }
 
 .main-description {
     margin:auto; 
-    padding: 10px; 
+    padding-left: 20px; 
     font-size: 20px;
     color: #666;
     max-width: 1200px;
-    text-align: center;
+    text-align: left;
 }
 
 .tech-stack {
@@ -369,27 +401,43 @@ footer {
 
 /* For-Mobile */
 @media (max-width: 767px) {
-  
-  .header {
-    
-    margin: auto;
-    }
 
   .header h1 {
-    font-size: 24px;
-    margin: 20px 10px;
+    font-size: 20px;
+    margin: 0px auto;
     padding: 10px;
+    height: auto;
+  }
+
+  .download-cv {
+    margin: auto;
   }
 
   .download-cv .btn{
     font-size: 12px;
-    padding: 5px 10px;
+    margin: 10px;
+    font-size: 8px;
+    padding: 2vw 4vw;
+
   }
 
   .navbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: auto;
     padding: auto;
+    top: 5px;
+    width: 79%;
+    height: 100px;
   }
+
+    .navbar ul {
+        gap: 10px;
+        align-items: center;
+        margin: 0px;
+        padding: auto;
+    }
 
   .navbar div a {
     font-size: 10px;
@@ -397,18 +445,36 @@ footer {
   }
 
   #intro {
-    font-size: 24px;
+    font-size: 18px;
+    margin-top: 10px;
   }
+
+  .main-description {
+    font-size: 14px;
+    /* padding: 0 10px; */
+  }
+
+  .main-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+
+  }
+
+  .main-content img {
+     margin-top: 50px;
+     width: 200px;
+     height: 200px;
+    }
 
   .about-me p {
     font-size: 16px;
-}
-  
-  
-.about-me-pic {
-    width: 150px;
-    height: 150px;
-}
+  }
+    
+  .about-me-pic {
+        width: 150px;
+        height: 150px;
+ }
 
 
   .description {
@@ -443,7 +509,7 @@ footer {
 
 /* For-Tablets */
 @media (min-width: 768px) and (max-width: 1023px) {
-  
+
     .header h1 {
     font-size: 24px;
     margin: 20px 10px;
@@ -454,10 +520,10 @@ footer {
     font-size: 12px;
     padding: 5px 10px;
   }
-  
+
     .navbar {
     width: 70%;
-    left: 15%;
+    height: 70px;
   }
 
   #intro {

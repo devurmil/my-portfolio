@@ -4,4 +4,4 @@ function handleClick() {
     alert('Message Sent!');
 }
 
-myButton.addEventListener('click', handleClick());
+myButton.addEventListener('click', handleClick);

@@ -43,3 +43,13 @@ form.addEventListener('submit', (event) => {
         }, 1500);
     }
 });
+
+document.querySelector("footer p").innerHTML = `&copy; ${new Date().getFullYear()} Urmil Ramani. All rights reserved.`;
+
+// ===== Loading Animation =====
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+  }, 500); // delay for smoother fade-out
+});

@@ -1,5 +1,6 @@
 /* ===== Preloader Styles ===== */
 #loader {
+  /* max-width: 100px; */
   position: fixed;
   top: 0;
   left: 0;
@@ -14,19 +15,20 @@
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.spinner {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid #007bff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 1s linear infinite;
-  margin-bottom: 10px;
+#loader img {
+  border-radius: 75px;
+  width: 150px;         /* adjust as needed */
+  height: 150px;        /* keep it square */
+  object-fit: contain;  
+  animation: zoom 2s ease-in-out infinite; 
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.10);
   }
 }
 
@@ -466,10 +468,13 @@ body.dark .contact-form textarea {
 }
 
 #theme{
-    /* display: flex; */
+    display: flex;
+    position: fixed;
+    bottom: 35px;
+    right: 2%;
     border-radius: 50px;
-    margin: 20px;
-    padding: 20px;
+    margin: 10px;
+    padding: 10px;
     background-color: #949494
 }
 body.dark #theme{

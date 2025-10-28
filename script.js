@@ -51,7 +51,7 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 500); // delay for smoother fade-out
+  }, 2500); // delay for smoother fade-out
 });
 
 

@@ -276,6 +276,20 @@ body.dark .projects-section p {
     cursor: pointer;
 }
 
+.tech-icon {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1s ease, transform 0.8s ease;
+}
+
+.tech-icon.visible {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
 .about-me {
     padding: 40px 20px;
     max-width: 1200px;

@@ -51,7 +51,19 @@ window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
   setTimeout(() => {
     loader.classList.add("hidden");
-  }, 2500); // delay for smoother fade-out
+
+    const techIcons = document.querySelectorAll(".tech-icon");
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, { threshold: 0.5 }); // Trigger when 50% visible
+
+    techIcons.forEach(icon => observer.observe(icon));
+  }, 2000); // delay for smoother fade-out
 });
 
 
@@ -61,3 +73,19 @@ theme.addEventListener("click", () => {
     theme.textContent = 
         document.body.classList.contains("dark")? "☀️ Light Mode" : "🌙 Dark Mode";
 });
+
+// Adding tech icon Animation
+// document.addEventListener("DOMContentLoaded", () => {
+//   const techIcons = document.querySelectorAll(".tech-icon");
+
+//   const observer = new IntersectionObserver((entries, observer) => {
+//     entries.forEach(entry => {
+//       if (entry.isIntersecting) {
+//         entry.target.classList.add("visible");
+//         observer.unobserve(entry.target); // Animate only once
+//       }
+//     });
+//   }, { threshold: 1 });
+
+//   techIcons.forEach(icon => observer.observe(icon));
+// });

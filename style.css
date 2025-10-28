@@ -70,8 +70,6 @@ body.dark a {
     max-width: 1200px;
     align-items: center;
     margin: auto;
-    /* justify-content: space-between;  */
-    /* padding: 20px 20px; */
 }
 
 .header h1 {
@@ -95,6 +93,11 @@ body.dark a {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.navbar.dark {
+    background-color: #000;
+    color: #fff;
 }
 
 .navbar ul {
@@ -131,8 +134,9 @@ nav a.active{
     background-color: #c9c9c9;
 }
 
-.download-cv {
-    /* margin-right: 10px; */
+.download-cv.dark {
+    background-color: #fff;
+    color: #000;
 }
 
 .download-cv a {
@@ -199,15 +203,7 @@ nav a.active{
   justify-content:center;
   margin-bottom: 10px;
 }
-/* 
-#my-name {
-    font-size: 32px;x   
-    font-weight: bold;
-    color: #333;
-    text-align: left;
-    margin-top: 20px;
-    padding-left: 20px;
-} */
+
 #greet {
     font-size: 32px;
     font-weight: bold;

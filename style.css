@@ -50,6 +50,15 @@ body {
     background-color: #f9f9f9;
 }
 
+body.dark {
+    background-color: #121212;
+    color: #fff;
+}
+
+body.dark a {
+    color: #80d8ff;
+}
+
 /* Accessible focus styles */
 *:focus-visible {
     outline: 3px solid #000;
@@ -431,6 +440,11 @@ nav a.active{
     cursor: pointer;
 }
 
+#theme{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
 footer {
     text-align: center;
     padding: 20px;

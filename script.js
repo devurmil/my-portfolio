@@ -53,3 +53,11 @@ window.addEventListener("load", () => {
     loader.classList.add("hidden");
   }, 500); // delay for smoother fade-out
 });
+
+
+const theme = document.getElementById("theme");
+theme.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    theme.textContent = 
+        document.body.classList.contains("dark")? "☀️ Light Mode" : "🌙 Dark Mode";
+});

@@ -1,4 +1,5 @@
 console.log("Javascript Connected");
+ScrollReveal().reveal('.project-card', { delay: 200, distance: '50px', origin: 'bottom' });
 
 const greeting = document.getElementById("greet");
     const hour = new Date().getHours();
@@ -13,7 +14,19 @@ const greeting = document.getElementById("greet");
     }
 
 greeting.innerHTML = message;
- 
+
+const intro = document.getElementById("intro");
+const text = "A Passionate Web Developer and Designer.";
+let index = 0;
+intro.innerHTML = "";
+function typeWriter() {
+    if (index < text.length) {
+        intro.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 75);
+    }
+}
+typeWriter();
 
 const myButton = document.getElementById('submitButton');
 

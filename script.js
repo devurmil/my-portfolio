@@ -31,7 +31,7 @@ typeWriter();
 const myButton = document.getElementById('submitButton');
 
     myButton.addEventListener("mouseover", () => {
-        myButton.style.backgroundColor = "#5e5e5eff";
+        myButton.style.backgroundColor = "#4e4e4eff";
     });
     myButton.addEventListener("mouseout", () => {
         myButton.style.backgroundColor = "";

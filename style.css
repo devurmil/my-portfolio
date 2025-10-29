@@ -136,6 +136,17 @@ nav a.active{
     background-color: #c9c9c9;
 }
 
+.nav-link.active {
+  /* color: #000000; */
+  font-weight: bold;
+  border-bottom: 2px solid #006eff;
+}
+body.dark .nav-link.active {
+  /* color: #ffffff; */
+  font-weight: bold;
+  border-bottom: 2px solid #ff8800;
+}
+
 body.dark .download-cv .btn {
     background-color: #353535;
     color: #ffffff;
@@ -486,6 +497,7 @@ body.dark .contact-form textarea {
     position: fixed;
     bottom: 35px;
     right: 2%;
+    cursor: pointer;
     border-radius: 50px;
     margin: 10px;
     padding: 10px;

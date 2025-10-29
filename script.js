@@ -74,18 +74,27 @@ theme.addEventListener("click", () => {
         document.body.classList.contains("dark")? "☀️ Light Mode" : "🌙 Dark Mode";
 });
 
-// Adding tech icon Animation
-// document.addEventListener("DOMContentLoaded", () => {
-//   const techIcons = document.querySelectorAll(".tech-icon");
 
-//   const observer = new IntersectionObserver((entries, observer) => {
-//     entries.forEach(entry => {
-//       if (entry.isIntersecting) {
-//         entry.target.classList.add("visible");
-//         observer.unobserve(entry.target); // Animate only once
-//       }
-//     });
-//   }, { threshold: 1 });
+// Code for current link highlighting based on scroll position
 
-//   techIcons.forEach(icon => observer.observe(icon));
-// });
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(pageYOffset >= (sectionTop - sectionHeight / 3)){
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if(link.getAttribute("href") === `#${current}`){
+            link.classList.add("active");
+        }
+    });
+});
+// End of current link highlighting code

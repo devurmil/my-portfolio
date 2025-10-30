@@ -118,8 +118,9 @@ canvas#bg {
     padding: 0;
     margin: 0;
 }
-body.dark .navbar a {
-    background-color: #797979;
+body.dark .navbar {
+    box-shadow: 5px 5px 15px rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,0.5);
     color: #fff;
 }
 
@@ -142,9 +143,16 @@ nav a.active{
     display: flex;
     justify-content: center;
 }
+body.dark .navbar a {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0.5);
+}
 
 .navbar a:hover {
     background-color: #c9c9c9;
+}
+body.dark .navbar a:hover {
+    background-color: #5d5d5d;
 }
 
 .nav-link.active {
@@ -155,11 +163,11 @@ nav a.active{
 body.dark .nav-link.active {
   /* color: #ffffff; */
   font-weight: bold;
-  border-bottom: 2px solid #ff8800;
+  border-bottom: 2px solid #006eff;
 }
 
 body.dark .download-cv .btn {
-    background-color: #353535;
+    background-color: #575757;
     color: #ffffff;
 }
 

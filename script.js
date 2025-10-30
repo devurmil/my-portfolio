@@ -6,7 +6,6 @@ const canvas = document.getElementById('bg');
 const ctx = canvas.getContext('2d');
 canvas.width = innerWidth;
 canvas.height = innerHeight;
-
 const particles = [];
 for(let i = 0; i < 100; i++){
     particles.push({
@@ -20,10 +19,12 @@ for(let i = 0; i < 100; i++){
 
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const isDark = document.body.classList.contains('dark');
+    const fillColor = isDark ? 'rgba(255,255,255,0.4)' : 'rgba(0,0,0,0.4)';
     particles.forEach(p => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+        ctx.fillStyle = fillColor;
         ctx.fill();
         p.x += p.vx;
         p.y += p.vy;

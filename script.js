@@ -1,6 +1,39 @@
 console.log("Javascript Connected");
 ScrollReveal().reveal('.project-card', { delay: 200, distance: '50px', origin: 'bottom' });
 
+// Background effect
+const canvas = document.getElementById('bg');
+const ctx = canvas.getContext('2d');
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const particles = [];
+for(let i = 0; i < 100; i++){
+    particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2 + 1,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5
+    });
+}
+
+function animate(){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+        ctx.fill();
+        p.x += p.vx;
+        p.y += p.vy;
+        if(p.x < 0 || p.x > canvas.width) p.vx *= -1;
+        if(p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+    requestAnimationFrame(animate);
+}
+animate();
+
 const greeting = document.getElementById("greet");
     const hour = new Date().getHours();
     let message;
@@ -111,3 +144,21 @@ window.addEventListener("scroll", () => {
     });
 });
 // End of current link highlighting code
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById("scrollToTop");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});

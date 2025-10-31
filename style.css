@@ -432,13 +432,13 @@ body.dark .project-card:hover {
 .popup-content {
     display: flex;
     flex-direction: row;
-    background: #fff;
+    background: rgba(255,255,255,0.7);
     padding: 40px;
-    min-width: 600px;
+    /* min-width: 600px; */
     max-width: 1300px;
     max-height: 90vh;
     overflow-y: auto;
-    width: 80%;
+    width: 75%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     align-items: center;
@@ -447,11 +447,16 @@ body.dark .project-card:hover {
     overflow: hidden;
 }
 
-@media (max-width: 767px) {
+body.dark .popup-content {
+    background: rgba(0, 0, 0, 0.8);
+    color: #c9c9c9;
+}
+
+@media (max-width: 768px) {
     .popup-content {
         flex-direction: column;   /* stack vertically */
         min-width: unset;         /* allow smaller width */
-        max-width: 80vw;        /* fit mobile screen */
+        max-width: 70vw;        /* fit mobile screen */
         width: 80%;               /* fit mobile screen */
         padding: 20px;            /* reduce spacing */
         max-height: 85vh;

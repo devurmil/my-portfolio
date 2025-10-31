@@ -118,73 +118,196 @@
         <div class="projects-section">
             <h2>Projects</h2>
             <div class="project-list">
-                <div>
-                    <h3>Rakshak (a women’s safety app):</h3>
-                    <div class="project-card">
+                
+                <!-- Rakshak -->
+                <div class="project-card" onclick="openPopup('rakshakPopup')">
+                    <div>
+                        <h3>Rakshak (Women’s Safety App)</h3>
+                        <p>A mobile/web app ensuring women’s safety with real-time alerts.</p>
+                    </div>
+                    <img src="images/rakshak.jpg" alt="Rakshak app screenshot" class="project-pic" loading="lazy" width="400" height="200">
+                </div>
+                <!-- Rakshak Popup -->
+                <!-- Rakshak Popup -->
+                <div id="rakshakPopup" class="popup-card" onclick="outsideClose(event, 'rakshakPopup')">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('rakshakPopup')">&times;</span>
+                        <img src="images/rakshak.jpg" alt="Rakshak app screenshot" class="project-pic" loading="lazy" width="400" height="200">
+                        
+                        
                         <div>
-                            <p><b>Description:</b> A mobile/web application focused on women’s safety.</p>
+                            <h2>Rakshak (Women’s Safety App)</h2>
+                            <p><b>Description:</b> 
+                                Rakshak is a real-time women’s safety application built to provide immediate help in emergency situations. It empowers users by combining rapid alert systems, location tracking, and safety features in one seamless interface. The app’s main goal is to ensure that women can access help within seconds, wherever they are.
+                            </p>
+
                             <p><b>Key Features:</b></p>
                             <ul>
-                                <li>Emergency panic button & side-button trigger</li>
-                                <li>Live location sharing</li>
-                                <li>Safe zone map for nearby help centers</li>
-                                <li>Multilingual 24x7 helpline</li>
+                                <li>🚨 <b>Panic Button & Side-Button Trigger:</b> Instantly alert emergency contacts and nearby authorities with a single tap or side-button gesture.</li>
+                                <li>📍 <b>Live Location Sharing:</b> Continuously shares the user’s location with trusted contacts during emergencies.</li>
+                                <li>🗺️ <b>Safe Zone Map:</b> Displays nearby police stations, hospitals, and safe zones for quick navigation.</li>
+                                <li>🗣️ <b>Multilingual 24x7 Helpline:</b> Offers real-time assistance in multiple Indian languages for better accessibility.</li>
+                                <li>📞 <b>Custom Emergency Contacts:</b> Users can pre-register trusted contacts for faster alerts.</li>
+                                <li>⚙️ <b>Gesture-Based Activation:</b> Allows discreet help requests through shake or gesture recognition.</li>
+                                <li>🔒 <b>Secure Data Handling:</b> Ensures privacy through encrypted user data and safe communication protocols.</li>
                             </ul>
+
                             <p><b>Tech Stack:</b> React Native, Node.js, Express, MongoDB</p>
-                        </div>
-                        <img src="images/rakshak.jpg" alt="Rakshak app screenshot" title="Rakshak App" class="project-pic" loading="lazy" width="400" height="200">
-                    </div>
-                </div>
-                <div>
-                    <h3>Delish Diaries (Recipe Website):</h3>
-                    <div class="project-card">
-                        <img src="images/delish.png" alt="Delish website screenshot" title="Delish Web" class="project-pic" loading="lazy" width="400" height="200">
-                        <div>
-                            <p><b>Description:</b> A recipe-sharing platform where users can post, manage, and explore recipes.</p>
-                            <p><b>Key Features:</b></p>
-                            <ul>
-                                <li>User registration and login system</li>
-                                <li>Post, edit, and view recipes</li>
-                                <li>Comment system for interactions</li>
-                                <li>Social sharing integration</li>
-                            </ul>
-                            <p><b>Tech Stack:</b> HTML, CSS, JavaScript, Oracle Database, Incremental Model</p>
+
+                            <p><b>Project Highlights:</b> 
+                                Rakshak combines mobile technology with geolocation intelligence to enhance public safety. The app’s backend ensures real-time synchronization of alerts, while the frontend offers a user-friendly and intuitive interface. It focuses on reliability, performance, and minimal response time to ensure user trust and safety.
+                            </p>
+
+                            <p><b>Development Model:</b> 
+                                Designed using the <b>Incremental Model</b>, each release introduced new features such as map integration, voice activation, and secure messaging to ensure stepwise testing and optimization.
+                            </p>
+
+                            <p><b>Future Enhancements:</b> 
+                                Planned features include AI-based threat detection, smartwatch integration, predictive location tracking, and community alert networks to create a connected safety ecosystem.
+                            </p>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3>Tourism Management System (Startup Project):</h3>
-                    <div class="project-card">
-                        <div>
-                            <p><b>Description:</b> A platform to book and manage tourism services.</p>
-                            <p><b>Key Features:</b></p>
-                            <ul>
-                                <li>Tour package browsing & booking</li>
-                                <li>User authentication & management</li>
-                                <li>Payment integration</li>
-                                <li>Admin dashboard for managing packages</li>
-                            </ul>
-                            <p><b>Tech Stack:</b> Node.js, React, Prisma, MySQL</p>
-                        </div>
-                        <img src="images/www.jpg" alt="Tourism management web screenshot" title="Wander Web" class="project-pic" loading="lazy" width="400" height="200">
+
+                
+                <!-- Delish Diaries -->
+                <div class="project-card" onclick="openPopup('delishPopup')">
+                    <img src="images/delish.png" alt="Delish Diaries Website" class="project-pic" loading="lazy" width="400" height="200">
+                    <div>
+                        <h3>Delish Diaries (Recipe Website)</h3>
+                        <p>A dynamic recipe-sharing platform for culinary enthusiasts.</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Smart Farmer (Digital Farmer Assistant):</h3>
-                    <div class="project-card">
-                        <img src="images/smart.jpg" alt="Smart Farmer web screenshot" title="Smart Farmer Web" class="project-pic" loading="lazy" width="400" height="200">
-                        <div>
-                            <p><b>Description:</b> A web-based solution for smart agriculture that detects crop leaf diseases.</p>
-                            <p><b>Key Features:</b></p>
-                            <ul>
-                                <li>Upload crop leaf image to detect disease</li>
-                                <li>Multiple disease classifications</li>
-                                <li>Suggests treatment/advice</li>
-                            </ul>
-                            <p><b>Tech Stack:</b> Python, Machine Learning, Flask/Django, React</p>
+                <!-- Delish Diaries Popup -->
+                <div id="delishPopup" class="popup-card" onclick="outsideClose(event, 'delishPopup')">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('delishPopup')">&times;</span>
+                        
+                            <img src="images/delish.png" 
+                            alt="Delish Diaries website screenshot" 
+                            title="Delish Diaries Web" class="project-pic" loading="lazy">
+                            <div>
+                            <h3>Delish Diaries (Recipe Website)</h3>
+                                <p><b>Description:</b> 
+                                    Delish Diaries is a dynamic recipe-sharing platform that allows users to explore, create, and manage recipes effortlessly. It promotes a community-driven cooking experience by enabling users to share culinary creations, comment on recipes, and connect with food enthusiasts worldwide.
+                                </p>
+
+                                <p><b>Key Features:</b></p>
+                                <ul>
+                                    <li>👩‍🍳 <b>User Management:</b> Secure registration, login, and profile customization.</li>
+                                    <li>📜 <b>Recipe Management:</b> Add, edit, and delete personal recipes with images and ingredients.</li>
+                                    <li>💬 <b>Interactive Comments:</b> Users can engage by commenting, liking, or sharing recipes.</li>
+                                    <li>🌐 <b>Social Integration:</b> Seamless sharing across platforms for better visibility.</li>
+                                    <li>📊 <b>Database Connectivity:</b> Oracle Database used for efficient data storage and retrieval.</li>
+                                    <li>🧩 <b>Development Model:</b> Built using the Incremental Model for systematic feature rollout.</li>
+                                </ul>
+
+                                <p><b>Tech Stack:</b> HTML, CSS, JavaScript, Oracle Database</p>
+
+                                <p><b>Project Highlights:</b> The website emphasizes usability, aesthetic design, and performance optimization. It includes responsive layouts, smooth navigation, and well-structured data flow between frontend and backend components.</p>
+
+                                <p><b>Future Enhancements:</b> 
+                                        Plans to integrate personalized recipe recommendations using AI, enable meal-planning tools, and support real-time chat for community discussions.
+                                </p>
                         </div>
                     </div>
                 </div>
+
+
+                <!-- Tourism Management System -->
+                <div class="project-card" onclick="openPopup('tourismPopup')">
+                    <h3>Tourism Management System</h3>
+                    <p>Book and manage tours easily with integrated services.</p>
+                    <img src="images/www.jpg" alt="Tourism web screenshot" class="project-pic" loading="lazy" width="400" height="200">
+                </div>
+
+                <!-- Tourism Management System Popup -->
+                <div id="tourismPopup" class="popup-card" onclick="outsideClose(event, 'tourismPopup')">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('tourismPopup')">&times;</span>
+                        <img src="images/www.jpg" 
+                            alt="Tourism Management System screenshot" 
+                            title="Tourism Management Web">
+
+                            <div>
+                                <h3>Tourism Management System (Startup Project)</h3>
+                                <p><b>Description:</b> 
+                                The Tourism Management System is an end-to-end web platform designed to simplify and digitize the process of booking, managing, and exploring tourism services. It provides an efficient system for travelers, tour operators, and administrators to interact through a single, integrated interface.
+                                </p>
+
+                                <p><b>Key Features:</b></p>
+                                <ul>
+                                <li>🏞️ <b>Tour Package Management:</b> Browse, filter, and book customizable tour packages with real-time availability.</li>
+                                <li>👤 <b>User Authentication:</b> Secure login, registration, and role-based access for users and admins.</li>
+                                <li>💳 <b>Payment Integration:</b> Supports online payments with receipts and booking confirmations.</li>
+                                <li>📊 <b>Admin Dashboard:</b> Centralized interface to manage users, destinations, and transactions.</li>
+                                <li>📅 <b>Booking Tracker:</b> View upcoming trips, manage cancellations, and access travel history.</li>
+                                <li>📨 <b>Notification System:</b> Sends automated booking and confirmation alerts via email.</li>
+                                </ul>
+
+                                <p><b>Tech Stack:</b> Node.js, React, Prisma, MySQL</p>
+
+                                <p><b>Project Highlights:</b> 
+                                Built with a focus on scalability and user convenience, the system uses React for an interactive frontend and Node.js with Prisma ORM for secure and optimized backend operations. MySQL ensures reliable data management and smooth transaction handling.
+                                </p>
+
+                                <p><b>Development Model:</b> 
+                                Implemented using the <b>Incremental Model</b>, allowing modular development and testing of components like booking, payment, and admin management in separate iterations.
+                                </p>
+
+                                <p><b>Future Enhancements:</b> 
+                                Integration of AI-driven tour recommendations, multilingual support, travel insurance linking, and a chatbot-based query assistant to improve customer experience and accessibility.
+                                </p>
+                            </div>
+                    </div>
+                </div>
+
+                <!-- Smart Farmer -->
+                <div class="project-card" onclick="openPopup('farmerPopup')">
+                    <img src="images/smart.jpg" alt="Smart Farmer web screenshot" class="project-pic" loading="lazy" width="400" height="200">
+                    <h3>Smart Farmer (Digital Assistant)</h3>
+                    <p>Detects crop leaf diseases and provides treatment suggestions.</p>
+                </div>
+
+                <!-- Smart Farmer Popup -->
+                <div id="farmerPopup" class="popup-card" onclick="outsideClose(event, 'farmerPopup')">
+                    <div class="popup-content">
+                        <span class="close-btn" onclick="closePopup('farmerPopup')">&times;</span>
+                            <img src="images/smart.jpg"  alt="Smart Farmer web screenshot" title="Smart Farmer Web">
+                            <div>
+                                <h3>Smart Farmer (Digital Farmer Assistant)</h3>
+                                <p><b>Description:</b> 
+                                Smart Farmer is an AI-driven agricultural web solution designed to assist farmers in maintaining crop health. It enables users to upload leaf images, automatically detect diseases, and receive instant treatment recommendations, contributing to higher crop yield and sustainable farming.
+                                </p>
+
+                                <p><b>Key Features:</b></p>
+                                <ul>
+                                <li>🌿 <b>Image-Based Disease Detection:</b> Farmers can upload crop leaf images to identify diseases using trained ML models.</li>
+                                <li>🧠 <b>Machine Learning Integration:</b> Uses image classification algorithms to detect multiple crop diseases accurately.</li>
+                                <li>💊 <b>Treatment Suggestions:</b> Provides appropriate remedies, preventive measures, and fertilizer guidance.</li>
+                                <li>📊 <b>Data Analytics:</b> Tracks and visualizes disease patterns for regional agricultural insights.</li>
+                                <li>🌎 <b>Responsive Web Interface:</b> User-friendly design compatible with both desktop and mobile devices.</li>
+                                <li>🔐 <b>Secure Access:</b> Role-based access for farmers, experts, and administrators.</li>
+                                </ul>
+
+                                <p><b>Tech Stack:</b> Python, Machine Learning, Flask/Django, React</p>
+
+                                <p><b>Project Highlights:</b> 
+                                The platform combines modern frontend technologies with AI capabilities. React ensures a responsive UI, while Flask/Django powers the backend for fast API responses. Machine Learning models trained on large datasets enable precise disease identification and actionable insights.
+                                </p>
+
+                                <p><b>Development Model:</b> 
+                                Developed using the <b>Incremental Model</b>, focusing on building core disease detection first, followed by analytics and community support modules.
+                                </p>
+
+                                <p><b>Future Enhancements:</b> 
+                                Upcoming features include voice-based assistance for rural accessibility, multilingual crop support, real-time weather forecasting, and integration with IoT sensors for automated soil and crop monitoring.
+                                </p>
+                            </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </section>

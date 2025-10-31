@@ -163,3 +163,21 @@ scrollToTopBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+// End of Scroll to Top Button
+
+// Popup card Script 
+function openPopup(id) {
+    document.getElementById(id).classList.add('active');
+}
+
+function closePopup(id) {
+    document.getElementById(id).classList.remove('active');
+}
+
+function outsideClose(event, id) {
+    const popup = document.getElementById(id);
+    const content = popup.querySelector('.popup-content');
+    if (event.target === popup) {
+        closePopup(id);
+    }
+}

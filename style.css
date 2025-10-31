@@ -434,7 +434,6 @@ body.dark .project-card:hover {
     flex-direction: row;
     background: rgba(255,255,255,0.7);
     padding: 40px;
-    /* min-width: 600px; */
     max-width: 1300px;
     max-height: 90vh;
     overflow-y: auto;
@@ -445,6 +444,12 @@ body.dark .project-card:hover {
     position: absolute;
     animation: scaleUp 0.3s ease;
     overflow: hidden;
+}
+
+.popup-content ul {
+    text-align: left;
+    margin: 10px 0px;
+    padding-left: 20px;
 }
 
 body.dark .popup-content {

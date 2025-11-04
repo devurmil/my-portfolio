@@ -181,3 +181,37 @@ function outsideClose(event, id) {
         closePopup(id);
     }
 }
+
+//Github repository fetch and display
+async function addGitHubLink() {
+    try {
+        const response = await fetch('https://api.github.com/users/devurmil/repos');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const repos = await response.json();
+        const repo = repos.find(r => r.name === 'Smart-Farmer');
+
+        const farmerCard = document.getElementById('farmerPopup');
+
+        if (repo && farmerCard) {
+            console.log("✅ Smart Farmer repo found:", repo);
+
+            const githubLink = document.createElement("a");
+            githubLink.href = repo.html_url;
+            githubLink.target = "_blank";
+            githubLink.textContent = "🔗 View on GitHub";
+            githubLink.classList.add("github-link");
+
+            farmerCard.querySelector("#innerDiv").appendChild(githubLink);
+        } else if (!repo) {
+            console.warn("❌ Smart Farmer repo not found on GitHub.");
+        } else {
+            console.warn("❌ Farmer popup card not found in the DOM.");
+        }
+    } catch (error) {
+        console.error('⚠️ Error fetching GitHub repositories:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', addGitHubLink);
